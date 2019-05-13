@@ -75,25 +75,86 @@ So as to not maintain hundreds of thousands of comments in memory for hours at a
 
 Most coherent text - including articles and comments - consists of informative words about the topic, interspersed with filler or function tokens like articles (the, an, a) and punctuation that do not contribute to the meaning of the text.
 These are called stopwords.
+
 A typical step in preprocessing data before training a topic model is to remove stopwords and we have used an augmented version of the SMART stopword list.
 In addition to the 570 words in the list, we added "Mr", "Mrs", "Ms", "Dr", "per", "cent", and all 7 days of the week.
 We only kept tokens that were alphabetical.
+
 Refer to the following [Basecamp document](https://3.basecamp.com/3749531/buckets/3682815/vaults/1408093034) for more information on how the stopwords were chosen.
 
 ## Topic Modelling
 
-### Approaches Considered
+### Preface
+
+As articles tend to be long and comments tend to be quite short generally, we decided to train a topic model on the SOCC articles and then apply this model to make predictions on comments from all three corpora.
+Since all three publications are Canadian, we assumed that the topics discussed in the articles would have a lot of overlap.
+By this logic and with the large number of SOCC articles we have (over 10,000), the fact that we did not have article data for the other two publications would not present a problem.
+
+We had no previous knowledge of the topics that exist across the articles in SOCC.
+This makes it difficult to apply a topic model such as LDA to it, where we need to specify the number of topics.
+The corpus is too large to consider trying out a wide range of values and evaluating them by hand individually.
+We would prefer a computational way to do this.
+
+Let's say we have a computational parameter that measures the "goodness" of a topic model.
+Then it is a lot simpler to write code to maximize the value of that computational parameter.
+We would iteratively create topic models with different numbers of topics, and finally return the model that is evaluated as being the best, based on the magical computational parameter we assume that we have.
+Let's call this series of steps a topic model creation pipeline.
+
+There are a range of options for this computational parameter that can be optimized for a solution to the problem, notably, perplexity, coherence, and rate of perplexity change.
+Finally, topic models are always best judged by humans, so there is always some degree of manual evaluation once the numbers are manageable.
+
+### High-level Approach
+
+With multiple options for the computational parameter that chooses the "best" topic model, but we don't necessarily know how well any of these metrics will perform on unlabelled data such as the SOCC articles.
+For a more trustworthy model creation pipeline, we can apply it to labelled data and tweak how we use these parameters so that when it is applied to the data, it gives us almost the same number of topics and labelling as the true topics (the labels).
+
+What we know about the SOCC data is that they are opinion articles from the Globe and Mail that are formally written.
+For topic modelling, we are more interested in the content-rich parts rather than the opinionated parts of the articles.
+So news articles (even hard news) would be a sensible choice for labelled data on which to train the topic model creation pipeline.
+
+The topics are never transplanted from the labelled dataset to the SOCC articles.
+All we are optimizing is our method of discovering a topic model that will then give us topics specific to the input corpus.
+We used the Rubin Satire dataset to finetune our topic model creation pipeline.
+This dataset consists of 240 articles across 12 topics in 4 domains, from real as well as satirical news sources.
+
+To evaluate the performance of a given topic model on the Rubin Satire dataset, we created a cross-tabulation by document of topic predictions and true labels, and performed a chi-squared test on it.
+The null hypothesis is that the predictions and the labels are independent of each other (which is not what we want).
+We want a low p-value to reject this null hypothesis in favour of the alternate hypothesis, that the topic model's results correlate with the true labels.
+
+With a range of topic models, we could look at the correlation between the p-values of their predictions on the Rubin Satire dataset (a true measure of correctness) and other heuristic measures such as coherence and perplexity, to see which metric matched up best.
+
+### What Did Not Work
+
+In terms of topic models, we found that the Hierarchical Dirichlet Process (HDP) topic model did not work and that LDA was better.
+Regarding heuristics to evaluate a topic model, the rate of perplexity was very noisy and so would not work.
+Additionally, as of the writing of this document, the [gensim](https://github.com/RaRe-Technologies/gensim/issues/701) and [scikit-learn](https://github.com/scikit-learn/scikit-learn/issues/6777) implementations have bugs that cause perplexity to increase with as the number of topics increased which should not happen.
+
+HDP theoretically seemed like a silver bullet as it does not require a number of topics to be specified.
+However, with the gensim implementation of HDP, the number of topics returned is fixed at 150.
+Many of these 150 topics are not useful, but discriminating between them is a difficult problem.
+
+One heuristic solution is to extract the LDA alpha parameter from the HDP model, the prior weight of a topic.
+All the prior weights add up to a total of 1, and each weight can be understood roughly as how likely that topic is to really exist in the data.
+However, picking a cutoff weight seemed almost arbitrary.
+The distributions of the priors for the Rubin Satire data looked very different from that of the SOCC article data, where the model seemed to suggest classifying all the articles into just 2-3 topics, so we decided to try other approaches.
 
 ### Finalized Pipeline
+
+We trained LDA models with different numbers of topics and used coherence scores to evaluate them.
+After picking a reasonable range of values, we fine-tuned the model's parameters such as the chunk size and how often to estimate log perplexity.
+There was also a lot of manual review of the topics' key words to ensure that we were not compromising on topic model quality by following what the numbers said.
 
 ## Visualizations
 
 ## Scripts - What and Where
 
-+ The Tyee XML to CSV conversion: The __preprocessing__ subfolder contains a notebook with the conversion of The Tyee raw data from XML to CSV format
-+ Constructiveness pipeline: The __constructiveness__ subfolder contains notebooks for each corpus
-+ Toxicity pipeline: The __toxicity__ subfolder contains notebooks for each corpus except for SOCC, for which we had previous results
-+ Stopping: The __preprocessing__ subfolder contains a notebook with code for stopping, as well as a CSV file containing the list of SMART stopwords
++ The Tyee XML to CSV conversion: The [preprocessing](./preprocessing/) subfolder contains a notebook with the conversion of The Tyee raw data from XML to CSV format
++ Constructiveness pipeline: The [constructiveness](./constructiveness/) subfolder contains notebooks for each corpus
++ Toxicity pipeline: The [toxicity](./toxicity/) subfolder contains notebooks for each corpus except for SOCC, for which we had previous results
++ Stopping: The [preprocessing](./preprocessing/) subfolder contains a notebook with code for stopping, as well as a CSV file containing the list of SMART stopwords
++ Topic modelling exploration: The [topic_modelling/exploration](./topic_modelling/exploration/) subfolder, where the most important notebook is the one titled __Topic Modelling Exploration__
++ Topic modelling final pipeline: The notebook titled __Running topic modelling on everything__ in the [topic_modelling](./topic_modelling/) subfolder
++ 
 
 ## Constructiveness and Toxicity Results
 
