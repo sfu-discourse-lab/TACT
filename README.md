@@ -22,4 +22,5 @@ The results of this project will provide insights to online news publications th
 ## Contact
 
 Vasundhara Gautam (vgautam@sfu.ca)
+
 Maite Taboada (mtaboada@sfu.ca)
