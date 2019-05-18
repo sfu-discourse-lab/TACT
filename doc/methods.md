@@ -138,16 +138,16 @@ This allows us to see trends such as the relative proportions of toxicity and co
 
 ## Scripts - What and Where
 
-All code is located in the [src](./src/) folder
+All code is located in the [src](../src/) folder
 
-+ The Tyee XML to CSV conversion: The [preprocessing](./src/preprocessing/) subfolder contains a notebook with the conversion of The Tyee raw data from XML to CSV format
-+ Constructiveness pipeline: The [constructiveness](./src/constructiveness/) subfolder contains notebooks for each corpus
-+ Toxicity pipeline: The [toxicity](./src/toxicity/) subfolder contains notebooks for each corpus except for SOCC, for which we had previous results
-+ Stopping: The [preprocessing](./src/preprocessing/) subfolder contains a notebook with code for stopping, as well as a CSV file containing the list of SMART stopwords
-+ Topic modelling exploration: The [topic_modelling/exploration](./src/topic_modelling/exploration/) subfolder, where the most important notebook is the one titled __Topic Modelling Exploration__
-+ Topic modelling final pipeline: The notebook titled __Running topic modelling on everything__ in the [topic_modelling](./src/topic_modelling/) subfolder
-+ Visualization exploration: The [visualizations/exploration](./src/visualizations/exploration/) subfolder contains explorations of different kinds of visualizations
-+ Visualization pipeline: The notebooks in the main level of the [visualizations/](./src/visualizations/) subfolder
++ The Tyee XML to CSV conversion: The [preprocessing](../src/preprocessing/) subfolder contains a notebook with the conversion of The Tyee raw data from XML to CSV format
++ Constructiveness pipeline: The [constructiveness](../src/constructiveness/) subfolder contains notebooks for each corpus
++ Toxicity pipeline: The [toxicity](../src/toxicity/) subfolder contains notebooks for each corpus except for SOCC, for which we had previous results
++ Stopping: The [preprocessing](../src/preprocessing/) subfolder contains a notebook with code for stopping, as well as a CSV file containing the list of SMART stopwords
++ Topic modelling exploration: The [topic_modelling/exploration](../src/topic_modelling/exploration/) subfolder, where the most important notebook is the one titled __Topic Modelling Exploration__
++ Topic modelling final pipeline: The notebook titled __Running topic modelling on everything__ in the [topic_modelling](../src/topic_modelling/) subfolder
++ Visualization exploration: The [visualizations/exploration](../src/visualizations/exploration/) subfolder contains explorations of different kinds of visualizations
++ Visualization pipeline: The notebooks in the main level of the [visualizations/](../src/visualizations/) subfolder
 
 ## References
 
