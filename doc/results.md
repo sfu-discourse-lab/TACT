@@ -162,7 +162,22 @@ We cannot conclude from these graphs that people comment more about politics tha
 This is because if there is a correlation between topics in articles and topics in comments, then they are not independent from each other.
 To find out what people comment most about, we need to account for and normalize the number of articles in any given topic.
 
+We do this by dividing the number of comments on a certain topic by the number of articles on that same topic.
+Interesting results emerge, as shown in the graph below.
 
+![](https://raw.githubusercontent.com/sfu-discourse-lab/TACT/master/img/topics/All_comments_normalized.png "Normalized discussed in the comments")
+
+This graphs shows the difference in the proportion of comments about a topic when compared to articles about that same topic.
+What we see here is a different set of top three topics - topics 6, 7 and 2.
+
+<img src="https://raw.githubusercontent.com/sfu-discourse-lab/TACT/master/img/topics/topic6.png" width="285" height="250"> <img src="https://raw.githubusercontent.com/sfu-discourse-lab/TACT/master/img/topics/topic7.png" width="285" height="250"> <img src="https://raw.githubusercontent.com/sfu-discourse-lab/TACT/master/img/topics/topic2.png" width="285" height="250">
+
+In these topics, we see more people mentioned - "Charest", "Redford" and "Romney".
+We also see more personal, abstract concepts such as "talk", "problem", "matter", "home", "community", "life" and "death".
+In contrast to these words, articles tend to be more factual and have more concrete nouns.
+
+At the same time, judging from the words "legislation", "program", "Trade", "Commons", "candidates", "global" and "local", it seems that comments do talk considerably about politics at different levels.
+This leads to our second conclusion, that people comment more about politics than other topics, but that they bring in personal experience and anecdotes when they do so.
 
 ## Topic Modelling and Constructiveness
 
