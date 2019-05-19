@@ -131,10 +131,37 @@ We trained LDA models with different numbers of topics and used coherence scores
 After picking a reasonable range of values, we fine-tuned the model's parameters such as the chunk size and how often to estimate log perplexity.
 There was also a lot of manual review of the topics' key words to ensure that we were not compromising on topic model quality by following what the numbers said.
 
+## Getting Predictions
+
+The best model had the following parameters:
++ num_topics: 15
++ chunksize: 15
++ eval_every: 1
++ iterations: 200
++ passes: 2
+
+This model was then used to predict the topics of the articles as well as the topics of all the comments in our three corpora.
+When a prediction is made on a text, the output is not one topic that the text is about.
+Rather, the output is a list of probabilities for each LDA topic.
+
+Since there are 15 topics, there would be 15 probabilities, allowing a text to be 50% about topic 1 and 50% about topic 2.
+This also means that if a text cannot be classified strongly into any topic, the output will be a list of 15 equal probabilities of 1/15 ≈ 6.67%.
+
+These prediction probabilities were saved for each comment.
+In the analysis of the results, a probability threshold of 10% was used.
+This means that a text (an article or a comment) was considered to be part of a topic if it had a probability of more than 10% for that topic.
+If this value was made too high, a lot of data could not be accounted for as normal texts are rarely about just 1-2 topics.
+
 ## Visualizations
 
 The main visualization of constructiveness and toxicity in a corpus of comments is done by plotting two lines for constructive and non-constructive comments, with toxicity on the horizontal axis and the number of comments on the vertical axis.
 This allows us to see trends such as the relative proportions of toxicity and constructiveness, and how toxicity and constructiveness relate to each other.
+
+All wordclouds were created using a [website for generating wordclouds](https://www.wordclouds.com/).
+The relevant words with the correct proportions were generated with code in the notebook __Input for wordclouds__.
+
+The topics discussed in a corpus were visualized by plotting the number of articles or comments per topic within the corpus for the 15 topics.
+An text was counted towards a topic if the topic model predicted a probability of more than 10% for the topic in that text.
 
 ## Scripts - What and Where
 
