@@ -83,6 +83,87 @@ With content from academics and researchers, we imagine that the audience intere
 
 ## Topic Modelling
 
+Topic modelling is a technique to discover the themes (henceforth "topics") discussed in a corpus of documents.
+Having trained an LDA topic model on the large corpus of SOCC articles, 15 distinct topics were discovered. The top 10 words of each topic is displayed below.
+
+<p align="center">
+  <b>Topic 1</b>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <b>Topic 2</b>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <b>Topic 3</b>
+</p>
+
+<img src="https://raw.githubusercontent.com/sfu-discourse-lab/TACT/master/img/topics/topic1.png" width="285" height="250"> <img src="https://raw.githubusercontent.com/sfu-discourse-lab/TACT/master/img/topics/topic2.png" width="285" height="250"> <img src="https://raw.githubusercontent.com/sfu-discourse-lab/TACT/master/img/topics/topic3.png" width="285" height="250">
+
+<p align="center">
+  <b>Topic 4</b>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <b>Topic 5</b>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <b>Topic 6</b>
+</p>
+
+<img src="https://raw.githubusercontent.com/sfu-discourse-lab/TACT/master/img/topics/topic4.png" width="285" height="250"> <img src="https://raw.githubusercontent.com/sfu-discourse-lab/TACT/master/img/topics/topic5.png" width="285" height="250"> <img src="https://raw.githubusercontent.com/sfu-discourse-lab/TACT/master/img/topics/topic6.png" width="285" height="250">
+
+<p align="center">
+  <b>Topic 7</b>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <b>Topic 8</b>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <b>Topic 9</b>
+</p>
+
+<img src="https://raw.githubusercontent.com/sfu-discourse-lab/TACT/master/img/topics/topic7.png" width="285" height="250"> <img src="https://raw.githubusercontent.com/sfu-discourse-lab/TACT/master/img/topics/topic8.png" width="285" height="250"> <img src="https://raw.githubusercontent.com/sfu-discourse-lab/TACT/master/img/topics/topic9.png" width="285" height="250">
+
+<p align="center">
+  <b>Topic 10</b>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <b>Topic 11</b>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <b>Topic 12</b>
+</p>
+
+<img src="https://raw.githubusercontent.com/sfu-discourse-lab/TACT/master/img/topics/topic10.png" width="285" height="250"> <img src="https://raw.githubusercontent.com/sfu-discourse-lab/TACT/master/img/topics/topic11.png" width="285" height="250"> <img src="https://raw.githubusercontent.com/sfu-discourse-lab/TACT/master/img/topics/topic12.png" width="285" height="250">
+
+<p align="center">
+  <b>Topic 13</b>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <b>Topic 14</b>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <b>Topic 15</b>
+</p>
+
+<img src="https://raw.githubusercontent.com/sfu-discourse-lab/TACT/master/img/topics/topic13.png" width="285" height="250"> <img src="https://raw.githubusercontent.com/sfu-discourse-lab/TACT/master/img/topics/topic14.png" width="285" height="250"> <img src="https://raw.githubusercontent.com/sfu-discourse-lab/TACT/master/img/topics/topic15.png" width="285" height="250">
+
+Predictions were first made on the articles. An article was counted towards a topic if the topic model predicted a probability of more than 10% for the topic in that article.
+
+![](https://raw.githubusercontent.com/sfu-discourse-lab/TACT/master/img/topics/Articles.png "Topics discussed in the articles")
+
+We see clearly that the 3 most popular topics of SOCC articles are topics 14, 10 and 4.
+
+<img src="https://raw.githubusercontent.com/sfu-discourse-lab/TACT/master/img/topics/topic14.png" width="285" height="250"> <img src="https://raw.githubusercontent.com/sfu-discourse-lab/TACT/master/img/topics/topic10.png" width="285" height="250"> <img src="https://raw.githubusercontent.com/sfu-discourse-lab/TACT/master/img/topics/topic4.png" width="285" height="250">
+
+These topics appear political but are not limited to Canada.
+The most common one, topic 14, contains the words "British" and "Chinese", suggesting international politics and economics.
+Topic 4 is clearly about Canadian politics at the national level, with the words "government", "NDP", "Liberals", "Harper" and "party".
+Topic 10 is about "people", "public" and "system[s]", suggesting local news, further emphasized by the appearance of "Vancouver".
+
+When predictions were made on the three comment corpora with the LDA model, strikingly similar patterns emerged.
+The top three topics are the same for both articles and comments and they remain the top three by a big margin.
+The graph below shows the results for all comments combined, but even when split up by corpus, the results are not far from each other.
+
+![](https://raw.githubusercontent.com/sfu-discourse-lab/TACT/master/img/topics/All_comments.png "Topics discussed in the comments")
+
+These graphs lead us to our first conclusion which is that the proportions of the topics discussed in comments seem to correlate directly with those of articles.
+This suggests that what people talk about is associated with the articles that they read, as opposed to being disproportionately about other topics.
+
+We cannot conclude from these graphs that people comment more about politics than any other topic, however.
+This is because if there is a correlation between topics in articles and topics in comments, then they are not independent from each other.
+To find out what people comment most about, we need to account for and normalize the number of articles in any given topic.
+
+
+
 ## Topic Modelling and Constructiveness
 
 ## Topic Modelling and Toxicity
