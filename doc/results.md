@@ -203,14 +203,14 @@ We now look at the patterns within each corpus as there were interesting differe
 
 ## SOCC
 
-![](https://raw.githubusercontent.com/sfu-discourse-lab/TACT/master/img/topics_constructiveness/All_comments.png "Proportion of constructive comments by topic - SOCC ")
+![](https://raw.githubusercontent.com/sfu-discourse-lab/TACT/master/img/topics_constructiveness/SOCC.png "Proportion of constructive comments by topic - SOCC ")
 
 SOCC comments are below the average in their constructiveness overall, but the pattern is remarkably consistent with the pattern seen across the board.
 The only difference is that the separation is larger between topics with less constructive comments and those with more constructive comments.
 
 ### The Tyee
 
-![](https://raw.githubusercontent.com/sfu-discourse-lab/TACT/master/img/topics_constructiveness/All_comments.png "Proportion of constructive comments by topic - The Tyee")
+![](https://raw.githubusercontent.com/sfu-discourse-lab/TACT/master/img/topics_constructiveness/The_Tyee.png "Proportion of constructive comments by topic - The Tyee")
 
 The Tyee has a fascinating pattern in its comments.
 The overall constructiveness of these comments comes in slightly higher than the average.
@@ -222,7 +222,7 @@ Were it not the case, it seems that a fixed proportion of readers of this public
 
 ### The Conversation
 
-![](https://raw.githubusercontent.com/sfu-discourse-lab/TACT/master/img/topics_constructiveness/All_comments.png "Proportion of constructive comments by topic - The Conversation")
+![](https://raw.githubusercontent.com/sfu-discourse-lab/TACT/master/img/topics_constructiveness/The_Conversation.png "Proportion of constructive comments by topic - The Conversation")
 
 The Conversation has the same pattern as the distribution of all comments put together, with the exaggerated differences as in the SOCC comments.
 
@@ -232,6 +232,51 @@ As before, we would attribute this to the nature of the publication and audience
 
 ## Topic Modelling and Toxicity
 
+We were also interested in seeing if there were differences in the toxicity of comments by the topics they discussed.
+Our assumption was that certain topics might be more controversial and cause more toxic comments.
 
+To our surprise, this is not the case.
+Unlike constructiveness, toxicity seems to pattern in roughly the same proportion across topics.
+The graph below shows the average toxicity score (a decimal prediction between 0.0 and 1.0), over all corpora.
+As before, we are calculating the proportion and not the raw numbers of comments, so that these results are unaffected by how popular a topic is for discussion.
+
+![](https://raw.githubusercontent.com/sfu-discourse-lab/TACT/master/img/topics_toxicity/All_comments.png "Proportion of toxic comments by topic")
+
+On average, the toxicity across all topics appears to be about 0.23, meaning that less than 1 in 4 comments is a toxic comment.
+There is not much fluctuation between topics, a pattern that is maintained across the three corpora.
+This lack of variation suggests that __toxicity in comments is not exacerbated by certain topics over others, but is more likely just a feature of online language.__
+When you click on an article, regardless of what it's about or how often the issue is discussed, there will always be a fixed proportion of comments on it that are toxic.
+
+## SOCC
+
+![](https://raw.githubusercontent.com/sfu-discourse-lab/TACT/master/img/topics_toxicity/SOCC.png "Proportion of toxic comments by topic - SOCC ")
+
+SOCC comments show a flat, unchanging pattern in their toxicity by topic.
+They provide support for the claim that there is a fixed proportion of toxic comments on every topic.
+
+### The Tyee
+
+![](https://raw.githubusercontent.com/sfu-discourse-lab/TACT/master/img/topics_toxicity/The_Tyee.png "Proportion of toxic comments by topic - The Tyee")
+
+The Tyee shows a little more distribution in the toxicity of its comments by topic but these differences are not significant.
+The average toxicity seems to be at the average of 0.23.
+
+### The Conversation
+
+![](https://raw.githubusercontent.com/sfu-discourse-lab/TACT/master/img/topics_toxicity/The_Conversation.png "Proportion of toxic comments by topic - The Conversation")
+
+The Conversation has the same overall pattern but just like its better performance on constructiveness, these comments are also slightly less toxic than online comments in general.
+The average toxicity of comments on The Conversation is around 0.18.
 
 ## Future Research
+
+The work in this project barely scratches the surface of the things that could be done with sophisticated topic modelling and systems to quantify constructiveness and toxicity.
+
+The following are potential future directions:
++ Constructiveness and toxicity by anonymity of username
++ Toxicity by gender / racial background of the author
++ Investigation of patterns using more narrow types of toxicity supported by Perspective API such as sexually explicit comments, threats, sarcasm, etc.
++ Threading of comments by topic, as a way of quantifying and comparing discussion between readers as opposed to standalone comments
++ Toxicity and constructiveness at different stages in a thread as an approximation of [Godwin's law](https://en.wikipedia.org/wiki/Godwin%27s_law)
++ Relationship between topics in articles to the topics in the comments about them to quantify how much comments stay on topic
++ Extending the taxonomy of an online comment to include sentiment (positive or negative feelings towards an article) and examining the relationship between sentiment and the other variables considered in this project
