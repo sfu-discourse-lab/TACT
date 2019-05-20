@@ -161,7 +161,12 @@ All wordclouds were created using a [website for generating wordclouds](https://
 The relevant words with the correct proportions were generated with code in the notebook __Input for wordclouds__.
 
 The topics discussed in a corpus were visualized by plotting the number of articles or comments per topic within the corpus for the 15 topics.
-An text was counted towards a topic if the topic model predicted a probability of more than 10% for the topic in that text.
+A text was counted towards a topic if the topic model predicted a probability of more than 10% for the topic in that text.
+
+The relationship between topics and constructiveness was visualized by dividing comments up by the 15 topics.
+Then the average constructiveness was calculated by topic and plotted in a bar graph.
+As before, a text was counted towards a topic if the topic model predicted a probability of more than 10% for the topic in that text.
+The relationship between topics and toxicity was visualized in the same way.
 
 ## Scripts - What and Where
 
@@ -176,5 +181,32 @@ All code is located in the [src](../src/) folder
 + Visualization exploration: The [visualizations/exploration](../src/visualizations/exploration/) subfolder contains explorations of different kinds of visualizations
 + Visualization pipeline: The notebooks in the main level of the [visualizations/](../src/visualizations/) subfolder
 
-## References
+## Bibliography
 
++ [SOCC](https://github.com/sfu-discourse-lab/SOCC)
++ [The Tyee](https://thetyee.ca/)
++ [The Conversation](https://theconversation.com/ca)
++ [NumPy](https://www.numpy.org/)
++ [pandas](http://pandas.pydata.org/)
++ [matplotlib](https://matplotlib.org/)
++ [scikit-learn](https://scikit-learn.org/stable/)
++ [jupyter](https://jupyter.org/)
++ [seaborn](https://seaborn.pydata.org/)
++ [gensim](https://radimrehurek.com/gensim/)
++ [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/)
++ [spaCy](https://spacy.io/)
++ [Stack Overflow](https://stackoverflow.com/)
++ [Python](https://www.python.org/)
++ [R](https://www.r-project.org/)
++ [Wikipedia](https://www.wikipedia.org/)
++ [Google Perspective API](http://perspectiveapi.com/#/home)
++ Rubin, Chambers, Smyth & Steyvers: Statistical topic models for multi-label document classification
++ Nan & Cui: Introduction to Text Visualization
++ Röder, Both & Hinneburg: Exploring the Space of Topic Coherence Measures
++ Arun, Suresh, Madhavan & Murty: On Finding the Natural Number of Topics with Latent Dirichlet Allocation: Some Observations
++ Newman, Bonilla & Buntine: Improving Topic Coherence with Regularized Topic Models
++ Kolhatkar & Taboada: Using New York Times Picks to Identify Constructive Comments
++ Kolhatkar, Wu, Cavasso, Francis, Shukla & Taboada: The SFU Opinion and Comments Corpus: A Corpus for the Analysis of Online News Comments
++ Grimmer: A Bayesian Hierarchical Topic Model for Political Texts: Measuring Expressed Agendas in Senate Press Releases
++ Chang, Boyd-Graber, Wang, Gerrish & Blei: Reading Tea Leaves: How Humans Interpret Topic Models
++ Zhao, Chen, Perkins, Liu, Ge, Ding & Zou: A heuristic approach to determine an appropriate number of topics in topic modeling
