@@ -39,12 +39,12 @@ These graphs all show toxicity on the horizontal axis, the number of comments on
 
 The highest point in the graph at over 200,000 comments is a blue dot, i.e., non-constructive comments.
 They are low in toxicity - around 0-15% toxicity.
-Non-constructive and non-toxic comments like "I agree" or "I disagree" fall into this category and make up the majority of online comments in these three publications, as we would expect.
+__Non-constructive and non-toxic comments like "I agree" or "I disagree" fall into this category and make up the majority of online comments in these three publications__, as we would expect.
 
-Through most of the graph, non-constructive comments are more common than constructive comments, which also aligns with our intuitions about seeing few logical comments on the internet.
+Through most of the graph, __non-constructive comments are more common than constructive comments__, which also aligns with our intuitions about seeing few logical comments on the internet.
 However, in the central part of the graph with middling levels of toxicity, constructive comments tend to be slightly more common.
 Additionally, the peak of the constructive (orange) line is at about 15% toxicity.
-Both these findings imply that constructive comments tend to contain some small proportion of toxicity.
+Both these findings imply that __constructive comments tend to contain some small proportion of toxicity__.
 The explanation we suggest for this is that constructive comments tend to provide qualified rather than total agreement or disagreement, unlike non-constructive comments.
 This qualification gives room for some name-calling in many constructive comments.
 
