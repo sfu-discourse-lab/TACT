@@ -25,7 +25,7 @@ Finally, perhaps the most interesting category is the constructive and toxic com
 Almost paradoxically, they contain well-reasoned arguments as well as hateful language.
 They sound condescending and often follow a format where they open with a toxic insult and continue with good reasoning.
 The shift is often so dramatic that if the first sentence was ignored, the comment would land squarely in the constructive and non-toxic category.
-These comments are more common than one would expect and are particularly interesting because they do not follow intuition.
+These comments are more common than one would expect and are particularly intriguing because they do not follow intuition.
 
 Below is a visual depiction of the four categories which also illustrates some examples.
 The non-constructive and toxic category consists of several examples stitched together where words considered insulting are censored with red asterisks.
@@ -56,6 +56,8 @@ Another point to notice when looking at the leftmost part of the graph is that a
 This means that there are more than twice as many non-toxic comments like "I agree" or "I disagree" than well-reasoned comments without insults.
 
 Now we will consider each publication individually to see how closely their data matches the average case.
+
+## SOCC
 
 ![](https://raw.githubusercontent.com/sfu-discourse-lab/TACT/master/img/SOCC.png "SOCC - constructiveness and toxicity")
 
@@ -149,13 +151,13 @@ The most common one, topic 14, contains the words "British" and "Chinese", sugge
 Topic 4 is clearly about Canadian politics at the national level, with the words "government", "NDP", "Liberals", "Harper" and "party".
 Topic 10 is about "people", "public" and "system[s]", suggesting local news, further emphasized by the appearance of "Vancouver".
 
-When predictions were made on the three comment corpora with the LDA model, strikingly similar patterns emerged.
+When predictions were made on the three comment corpora with the LDA model, similar patterns emerged.
 The top three topics are the same for both articles and comments and they remain the top three by a big margin.
 The graph below shows the results for all comments combined, but even when split up by corpus, the results are not far from each other.
 
 ![](https://raw.githubusercontent.com/sfu-discourse-lab/TACT/master/img/topics/All_comments.png "Topics discussed in the comments")
 
-These graphs lead us to our first conclusion which is that the proportions of the topics discussed in comments seem to correlate directly with those of articles.
+These graphs lead us to __our first conclusion which is that the proportions of the topics discussed in comments seem to correlate directly with those of articles.__
 This suggests that what people talk about is associated with the articles that they read, as opposed to being disproportionately about other topics.
 
 We cannot conclude from these graphs that people comment more about politics than any other topic, however.
@@ -177,10 +179,59 @@ We also see more personal, abstract concepts such as "talk", "problem", "matter"
 In contrast to these words, articles tend to be more factual and have more concrete nouns.
 
 At the same time, judging from the words "legislation", "program", "Trade", "Commons", "candidates", "global" and "local", it seems that comments do talk considerably about politics at different levels.
-This leads to our second conclusion, that people comment more about politics than other topics, but that they bring in personal experience and anecdotes when they do so.
+This leads to __our second conclusion, that people comment more about politics than other topics, but that they bring in personal experience and anecdotes when they do so.__
 
 ## Topic Modelling and Constructiveness
 
+We were interested in combining our results to see if there were differences in the constructiveness of comments by the topics they discussed.
+It turns out that the answers to this question are quite interesting.
+We began by counting the proportion of comments by topic that were constructive, over all corpora.
+Since we are calculating the proportion and not the raw numbers of comments, these results are unaffected by how popular a topic is for discussion.
+The bar graph below shows the average constructiveness score (a binary-valued prediction) for all 15 topics.
+
+![](https://raw.githubusercontent.com/sfu-discourse-lab/TACT/master/img/topics_constructiveness/All_comments.png "Proportion of constructive comments by topic")
+
+On average, the constructiveness across all topics appears to be between 0.30 and 0.35, indicating that roughly 1 in 3 comments is constructive.
+The fluctuations in constructiveness bear a striking resemblance to the distribution of articles in each topic, though the changes are less dramatic.
+As in the number of articles by topic, the top 3 topics are topics 4, 10 and 14.
+This suggests that __there is a higher degree of constructiveness in the comments relating to topics about which more articles are written__.
+Regular discussion in the media of an issue seems to promote better discussions about it.
+
+It is also worth pointing out that there is no clear relationship between constructiveness and the topics most often discussed in comments (topics 2, 6 and 7).
+
+We now look at the patterns within each corpus as there were interesting differences.
+
+## SOCC
+
+![](https://raw.githubusercontent.com/sfu-discourse-lab/TACT/master/img/topics_constructiveness/All_comments.png "Proportion of constructive comments by topic - SOCC ")
+
+SOCC comments are below the average in their constructiveness overall, but the pattern is remarkably consistent with the pattern seen across the board.
+The only difference is that the separation is larger between topics with less constructive comments and those with more constructive comments.
+
+### The Tyee
+
+![](https://raw.githubusercontent.com/sfu-discourse-lab/TACT/master/img/topics_constructiveness/All_comments.png "Proportion of constructive comments by topic - The Tyee")
+
+The Tyee has a fascinating pattern in its comments.
+The overall constructiveness of these comments comes in slightly higher than the average.
+Completely unlike the SOCC comments, the constructiveness of The Tyee comments is much more consistent across all topics.
+
+If the previous claim about constructiveness and number of articles was valid, then this suggests that The Tyee is publishing articles about all topics more equitably.
+Without articles from The Tyee it is hard to justify this claim.
+Were it not the case, it seems that a fixed proportion of readers of this publication are just good, constructive commenters about all issues, or that they hire good moderators for their online comments.
+
+### The Conversation
+
+![](https://raw.githubusercontent.com/sfu-discourse-lab/TACT/master/img/topics_constructiveness/All_comments.png "Proportion of constructive comments by topic - The Conversation")
+
+The Conversation has the same pattern as the distribution of all comments put together, with the exaggerated differences as in the SOCC comments.
+
+One point to make is that their average constructiveness is much higher than the other publications, with comments on the top 3 topics (4, 10 and 14) reaching close to a constructiveness value of 0.66.
+This means 2 in 3 comments on these topics are constructive, twice the average.
+As before, we would attribute this to the nature of the publication and audience.
+
 ## Topic Modelling and Toxicity
+
+
 
 ## Future Research
