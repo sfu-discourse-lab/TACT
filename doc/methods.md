@@ -44,11 +44,9 @@ The topic modelling predictions on the comments are stored in __Vault -> Discour
 
 Getting constructiveness and toxicity predictions on comments is straightforward as neither system requires special preprocessing of a comment.
 
-For constructiveness, we use the SVM model batch predictor.
-A new ConstructivenessPredictor is initialized and the predict_svm_batch() method is called on a pandas DataFrame of comments.
-The notebooks were placed in the __web_interface__ level of the hierarchy in the Constructiveness system source code which is publicly available on [GitHub](https://github.com/sfu-discourse-lab/Constructiveness_public).
-The constructiveness prediction is a binary value.
-The results are written to a new CSV file.
+For constructiveness, we use the BiLSTM model predictor.
+A new ConstructivenessPredictor is initialized and the predict_bilstm() method is called on each comment.
+The constructiveness prediction is binary (CONSTRUCTIVE or NON-CONSTRUCTIVE), and the results are written to a new CSV file.
 
 The toxicity pipeline required some more set-up.
 First an API key needs to be requested by going to the [Perspective API website](http://perspectiveapi.com/#/).
