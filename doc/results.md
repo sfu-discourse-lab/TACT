@@ -212,13 +212,8 @@ The only difference is that the separation is larger between topics with less co
 
 ![](https://raw.githubusercontent.com/sfu-discourse-lab/TACT/master/img/topics_constructiveness/The_Tyee.png "Proportion of constructive comments by topic - The Tyee")
 
-The Tyee has a fascinating pattern in its comments.
-The overall constructiveness of these comments comes in slightly higher than the average.
-Completely unlike the SOCC comments, the constructiveness of The Tyee comments is much more consistent across all topics.
-
-If the previous claim about constructiveness and number of articles was valid, then this suggests that The Tyee is publishing articles about all topics more equitably.
-Without articles from The Tyee it is hard to justify this claim.
-Were it not the case, it seems that a fixed proportion of readers of this publication are just good, constructive commenters about all issues, or that they hire good moderators for their online comments.
+The overall pattern of constructiveness of comments made on The Tyee's website is consistent with the average case, except that across all topics, the constructiveness comes in higher than the average.
+Given the large, general audience of this publication, the higher constructiveness could be attributed to better moderation of their comments.
 
 ### The Conversation
 
