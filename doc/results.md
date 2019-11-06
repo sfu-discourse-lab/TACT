@@ -10,12 +10,12 @@ Any given comment is either constructive and toxic, constructive and non-toxic, 
 
 A non-constructive and non-toxic comment does not add meaningful discussion but does not insult either.
 Examples of this type of comment include polite, unjustified agreement or disagreement with the article.
-In the data we considered, these comments tended to show agreement more often than disagreement. **_CHECK::ANECDOTAL CLAIM, NO PROPER ANALYSIS DONE_**
+In the data we considered, these comments tended to show agreement more often than disagreement. 
 
 A non-constructive and toxic comment on the other hand consists of directed malice without providing good reasoning.
 This type of comment often contains colourful language but this category also includes sarcasm and more subtle insults.
 Despite the fact that agreement or disagreement with the article's content has nothing to do with a comment being in this category, we found a pattern in the data we considered.
-Comments in this category tended to disagree with the article's content or show disapproval of the views of the author or others mentioned in the article. **_CHECK::ANECDOTAL CLAIM, NO PROPER ANALYSIS DONE_**
+Comments in this category tended to disagree with the article's content or show disapproval of the views of the author or others mentioned in the article. 
 
 Comments that are constructive and non-toxic read like an essay.
 They tend to be longer and their sentences are linked cohesively, providing convincing arguments for their point of view.
