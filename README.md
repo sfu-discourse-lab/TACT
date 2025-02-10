@@ -7,7 +7,7 @@ We set out to investigate trends in the toxicity, constructiveness and topics of
 Online comments by themselves are interesting but it also helps to look at them in context - we do this using information about the articles on which these comments appeared.
 
 To find these trends, we use various machine-learning-based systems and approaches.
-For constructiveness, we use **_CHECK::REFERENCE_**, a constructiveness system developed at Simon Fraser University by Dr Maite Taboada and Dr Varada Kolhatkar.
+For constructiveness, we use [Constructiveness](https://github.com/kvarada/constructiveness), a constructiveness system developed at Simon Fraser University by Dr Maite Taboada and Dr Varada Kolhatkar.
 For toxicity, we use Google's Perspective API.
 For topic modelling, we settled on creating a Latent Dirichlet Allocation (LDA) model, the details of which are discussed in subsequent sections.
 
